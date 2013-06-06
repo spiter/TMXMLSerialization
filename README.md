@@ -49,13 +49,13 @@ And give the implementation in the corresponding .m file:
 
     @implementation ClassData
 
-    TM_LIST_SYNTHESIZE（Student*, student)
+    TM_LIST_SYNTHESIZE(Student*, student)
 
     @end
 
 Run the code below to parse the xml.
 
-    TMXMLSerializer *xmlSerializer = [[TMXMLSerializer alloc] initWithRootObjectClass:CLassData.class];
+    TMXMLSerializer *xmlSerializer = [[TMXMLSerializer alloc] initWithRootObjectClass:ClassData.class];
     ClassData *obj = [[ClassData alloc] init];
     NSError* e = [xmlSerializer deserialize:[testXML dataUsingEncoding:NSUTF8StringEncoding] intoObject:obj];
 
